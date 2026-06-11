@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Image Generator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background-scene">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="grid-floor"></div>
+  </div>
+
+  <main class="app">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">AI Creative Studio</p>
+        <h1>Generate stunning images from your imagination.</h1>
+        <p class="subtitle">
+          A modern AI image generator with cinematic styles, 3D motion,
+          polished UI, and instant creative previews.
+        </p>
+
+        <div class="hero-badges">
+          <span>⚡ Fast</span>
+          <span>🎨 Creative</span>
+          <span>🧠 AI Powered</span>
+          <span>✨ High Quality</span>
+        </div>
+      </div>
+
+      <div class="floating-card">
+        <div class="mini-window">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cube">
+          <div class="cube-face face-front">AI</div>
+          <div class="cube-face face-back">3D</div>
+          <div class="cube-face face-left">ART</div>
+          <div class="cube-face face-right">UX</div>
+          <div class="cube-face face-top">JS</div>
+          <div class="cube-face face-bottom">IMG</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="generator-layout">
+      <form id="imageForm" class="control-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Prompt Builder</p>
+            <h2>Create your image</h2>
+          </div>
+          <div class="status-pill">Ready</div>
+        </div>
+
+        <label for="prompt">Describe your image</label>
+        <textarea
+          id="prompt"
+          placeholder="Example: A futuristic Algerian hero standing on a neon rooftop in Phoenix, cinematic lighting, ultra detailed..."
+          required
+        ></textarea>
+
+        <div class="prompt-chips">
+          <button type="button" data-prompt="A futuristic city at night with flying cars, neon lights, cinematic rain, ultra detailed">Cyber City</button>
+          <button type="button" data-prompt="A magical desert oasis with glowing blue water, stars, cinematic fantasy art">Fantasy Oasis</button>
+          <button type="button" data-prompt="A professional developer workspace with holographic screens, dark futuristic UI, 3D lighting">Developer Setup</button>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <label for="style">Style</label>
+            <select id="style">
+              <option value="cinematic">Cinematic</option>
+              <option value="3D render">3D Render</option>
+              <option value="anime">Anime</option>
+              <option value="photorealistic">Photorealistic</option>
+              <option value="digital art">Digital Art</option>
+              <option value="fantasy concept art">Fantasy Concept Art</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="size">Size</label>
+            <select id="size">
+              <option value="1024x1024">Square</option>
+              <option value="1536x1024">Landscape</option>
+              <option value="1024x1536">Portrait</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="quality">Quality</label>
+            <select id="quality">
+              <option value="low">Low / Fast</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="generate-btn" type="submit">
+          <span>Generate Image</span>
+          <strong>✨</strong>
+        </button>
+
+        <p class="note">
+          Tip: Detailed prompts create better images. Mention lighting, style,
+          colors, mood, and camera angle.
+        </p>
+      </form>
+
+      <section class="preview-panel">
+        <div class="preview-header">
+          <div>
+            <p class="eyebrow">Output Preview</p>
+            <h2>Your artwork</h2>
+          </div>
+
+          <button id="downloadBtn" class="download-btn" disabled>
+            Download
+          </button>
+        </div>
+
+        <div id="imageStage" class="image-stage">
+          <div id="placeholder" class="placeholder">
+            <div class="magic-icon">🎨</div>
+            <h3>Your image will appear here</h3>
+            <p>Write a prompt and generate something amazing.</p>
+          </div>
+
+          <div id="loader" class="loader hidden">
+            <div class="loader-ring"></div>
+            <p>Creating your image...</p>
+          </div>
+
+          <img id="generatedImage" class="generated-image hidden" alt="Generated AI artwork" />
+        </div>
+
+        <div id="errorBox" class="error-box hidden"></div>
+      </section>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-title">
+        <p class="eyebrow">Recent Creations</p>
+        <h2>Local Gallery</h2>
+      </div>
+
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
