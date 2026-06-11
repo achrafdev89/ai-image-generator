@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-RENDER-BACKEND.onrender.com/api/generate-image";
+const API_URL = "https://https://ai-image-generator-aykl.onrender.com/api/generate-image";
 
 const form = document.getElementById("imageForm");
 const promptInput = document.getElementById("prompt");
