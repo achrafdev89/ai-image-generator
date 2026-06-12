@@ -49,7 +49,7 @@
 
 ### Generated Artwork
 
-<img src="screenshots/forecast.png" width="100%" alt="Generated Image"/>
+<img src="screenshots/generator.png" width="100%" alt="Generated Image"/>
 
 ### Mobile Experience
 
