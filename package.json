@@ -2,9 +2,12 @@
   "name": "ai-image-generator-tools",
   "private": true,
   "scripts": {
-    "screenshots": "node scripts/capture-screenshots.js"
+    "screenshots": "node scripts/capture-screenshots.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "devDependencies": {
-    "playwright": "^1.58.2"
+    "playwright": "^1.58.2",
+    "wrangler": "^4.101.0"
   }
 }
