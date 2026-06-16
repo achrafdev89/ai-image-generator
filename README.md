@@ -8,7 +8,7 @@
 
 <p>
 
-<a href="https://visionforge-ash.netlify.app">
+<a href="https://ai-image-generator.achibane-dev.workers.dev/">
 <img src="https://img.shields.io/badge/🚀_Live_Demo-00C853?style=for-the-badge"/>
 </a>
 
@@ -150,7 +150,7 @@ or use VS Code Live Server.
 
 🚀 Live Demo:
 
-https://visionforge-ash.netlify.app/
+https://ai-image-generator.achibane-dev.workers.dev/
 
 ---
 
